@@ -11,54 +11,22 @@ class EpsImage(qrcode.image.base.BaseImage):
     """
 
     _header = '''\
-%!PS-Adobe-3.0
-%%BoundingBox: 0 0 595 842
-%%Creator: (Ghini)
-%%For: (ghini)
-%%CreationDate: (2016-01-15 21:34:45 )
-%%Title: (Untitled1)
-%%LanguageLevel: 2
-%%DocumentData: Clean7Bit
-%%Pages: (atend)
-%%Orientation: Portrait
-%%PageOrder: Ascend
-%%EndComments
-%%BeginProlog
-%%EndProlog
-%%BeginSetup
-%%EndSetup
-/SCALE { 0.45 0.45 scale 0 0 translate } bind def
-%%Page: 1 1
-%%BeginPageSetup
-%%EndPageSetup
-grestore
-
 /M { moveto } bind def
 /m { rmoveto } bind def
 /l { rlineto } bind def
 
 gsave
-SCALE
-0 1700 translate
 0 0 0 setrgbcolor
 1 setlinewidth
 gsave
-10 -200 translate
-16 16 scale
+2 2 scale
+0 .5 translate
 newpath
 '''
     _trailer = '''\
 stroke
-
 grestore
 showpage
-
-%%PageTrailer
-
-
-%%Trailer
-%%Pages: 1
-%%EOF
 '''
     
     def __init__(self, *args, **kwargs):

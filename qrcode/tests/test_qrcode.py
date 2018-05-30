@@ -146,6 +146,12 @@ class QRCodeTests(unittest.TestCase):
         img = qr.make_image(image_factory=SvgImageWhite)
         img.save(six.BytesIO())
 
+    def test_render_eps(self):
+        qr = qrcode.QRCode()
+        qr.add_data(UNICODE_TEXT)
+        img = qr.make_image(image_factory=qrcode.image.eps.EpsImage)
+        img.save(six.BytesIO())
+
     @unittest.skipIf(not pymaging_png, "Requires pymaging with PNG support")
     def test_render_pymaging_png(self):
         qr = qrcode.QRCode()

@@ -18,6 +18,7 @@ default_factories = {
     'pil': 'qrcode.image.pil.PilImage',
     'pymaging': 'qrcode.image.pure.PymagingImage',
     'svg': 'qrcode.image.svg.SvgImage',
+    'eps': 'qrcode.image.eps.EpsImage',
     'svg-fragment': 'qrcode.image.svg.SvgFragmentImage',
     'svg-path': 'qrcode.image.svg.SvgPathImage',
 }
